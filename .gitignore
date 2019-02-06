@@ -1,3 +1,5 @@
 .idea
 Jadu_PCH.iml
 node_modules
+.DS_Store
+*/DS_Store
