@@ -1,0 +1,111 @@
+/* Format */
+body {
+	background-size: 12460px;
+}
+
+/*************************
+	Nav block:
+	**********************/
+article {
+	height: 3em;
+	width: 10em;
+	display: table;
+	float:left;
+
+	span {
+
+		/* hide on load  */
+		display: none;
+
+	}
+
+	>input {
+
+		text-decoration: none;
+		display: block;
+		z-index: 99;
+		text-align: center;
+		text-transform: uppercase;
+
+
+	}
+
+	>label {
+			color: #666666;
+			display: block;
+			padding: 2em 0;
+			transition-property: transform, all;
+			transition-duration: 0.5s;
+			transition-timing-function: ease-out;
+		}
+
+	&:after {
+		clear: both;
+		display: table;
+	}
+}
+
+.show {
+	display:block;
+}
+
+.mod__f {
+
+	&_ele-radio {
+
+		border: 1px solid gray;
+
+		input {
+			border: 2px solid red;
+		    /* -webkit-appearance: none; */
+		    outline: none;
+		    box-shadow: none;
+		    padding: 0;
+		    background: green;
+		    background-size: 110%;
+		}
+	}
+}
+
+@DarkBrown: #292321;
+
+@Orange: #CC3300;
+
+div {
+  margin:0 0 0.75em 0;
+}
+
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label {
+    color: @DarkBrown;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    // -moz-border-radius:  50%;
+    // border-radius:  50%;
+}
+
+input[type="radio"] + label span {
+     border:1px solid @DarkBrown;
+}
+
+input[type="radio"]:checked + label span{
+     background-color:@Orange;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+}
