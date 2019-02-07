@@ -1,0 +1,36 @@
+/* header */
+.section {
+  &__header {
+    height: 170px;
+    &--wrapper {
+      width: 1600px;
+    }
+  }
+
+  &__search {
+
+  }
+
+  &__services {
+    background-color: $green;
+    &--footer {
+      background-color: black;
+    }
+  }
+
+  &__footer {
+    background-color: black;
+  }
+}
+
+.multi-content__wrapper {
+
+  background: url("../images/bg-houses.jpg") no-repeat 0 -150px;
+  height: 718px;
+  position: relative;
+
+}
+
+footer {
+
+}

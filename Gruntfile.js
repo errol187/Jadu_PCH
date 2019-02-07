@@ -19,7 +19,7 @@ module.exports = function(grunt){
             },
             sass: {
                 files: [
-                    'assets/sass/*.scss'
+                    'assets/scss/*.scss'
                 ],
                 tasks: ['sass:production']
             },
@@ -56,7 +56,7 @@ module.exports = function(grunt){
         sass: {
             dev: {
                 files: {
-                    'assets/css/style.css': 'assets/sass/style.scss'
+                    'assets/css/style.css': 'assets/scss/style.scss'
                 }
             },
             production: {
@@ -64,7 +64,7 @@ module.exports = function(grunt){
                     debugInfo: true
                 },
                 files: {
-                    'assets/css/style.css': 'assets/sass/style.scss'
+                    'assets/css/style.css': 'assets/scss/style.scss'
                 }
             }
         },
