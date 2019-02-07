@@ -17,11 +17,11 @@ module.exports = function(grunt){
                 ],
                 tasks: ['uglify']
             },
-            less: {
+            sass: {
                 files: [
-                    'assets/less/*.less'
+                    'assets/sass/*.scss'
                 ],
-                tasks: ['less:production']
+                tasks: ['sass:production']
             },
             css: {
                 files: [
@@ -34,10 +34,10 @@ module.exports = function(grunt){
               },
               files: [
                 'assets/js/**/*.js',
-                'assets/less/*.less',
+                'assets/less/*.scss',
                 'assets/css/style.css'
               ]
-            },
+            }
         },
         uglify: {
             options: {
@@ -53,18 +53,18 @@ module.exports = function(grunt){
                 dest: 'assets/js/build/<%= pkg.name %>.js'
             }
         },
-        less: {
+        sass: {
             dev: {
                 files: {
-                    'assets/css/style.css': 'assets/less/style.less'
+                    'assets/css/style.css': 'assets/sass/style.scss'
                 }
             },
             production: {
-                options: {
-                    cleancss: true
+                options : {
+                    debugInfo: true
                 },
                 files: {
-                    'assets/css/style.css': 'assets/less/style.less'
+                    'assets/css/style.css': 'assets/sass/style.scss'
                 }
             }
         },
@@ -90,7 +90,7 @@ module.exports = function(grunt){
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-ng-annotate');
 
     grunt.registerTask('default', ['watch']);
